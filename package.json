@@ -1,9 +1,13 @@
 {
   "name": "meta-scraper",
+  "description": "Scrapes a remote page and extracts all the 'link', 'meta', and 'title' tags.",
   "version": "1.0.0",
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
   "bin": {
     "meta-scraper": "bin/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/pdehaan/meta-scraper/issues"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -11,11 +15,16 @@
     "yargs": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "3.3.1"
+    "eslint": "^3.3.1"
   },
+  "homepage": "https://github.com/pdehaan/meta-scraper#readme",
   "keywords": [],
   "license": "WTFPL",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/meta-scraper.git"
+  },
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
