@@ -1,9 +1,5 @@
 # meta-scraper
 
-## Why:
-
-Why not.
-
 ## What:
 
 Scrapes a remote page and extracts all the `<link/>`, `<meta/>`, and `<title/>` tags.
@@ -16,6 +12,8 @@ $ npm i pdehaan/meta-scraper -s
 
 ## Usage:
 
+### API:
+
 ```js
 const { areWeMetaYet } = require('meta-scraper');
 
@@ -26,7 +24,30 @@ areWeMetaYet('https://reddit.com/r/worldnews')
   .catch(console.error);
 ```
 
-### Output:
+### CLI:
+
+```sh
+# Assuming `meta-scraper` is installed globally
+$ meta-scraper -u https://reddit.com/r/funny
+```
+
+Alternatively, you can install `meta-scraper` locally and then call `meta-scraper` via package.json `scripts`:
+
+```js
+"scripts": {
+  "cli": "meta-scraper -u https://reddit.com/r/funny",
+  "cli2": "meta-scraper -u "
+}
+```
+
+Now you can call `meta-scraper` in one of two ways:
+
+1. `$ npm run cli` &mdash; Will scrape the URL specified in package.json and dump the meta tags.
+2. `$ npm run cli2 -- https://reddit.com/r/gaming` &mdash; Will scrape the URL specified on the CLI and dump the meta tags.
+
+You see the /example/ directory for full code of all the options above.
+
+#### Output:
 
 ```html
 <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.reddit.com/r/sports/">

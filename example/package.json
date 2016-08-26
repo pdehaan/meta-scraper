@@ -1,0 +1,16 @@
+{
+  "name": "meta-scraper-test",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "dependencies": {
+    "meta-scraper": "github:pdehaan/meta-scraper"
+  },
+  "keywords": [],
+  "license": "WTFPL",
+  "main": "index.js",
+  "scripts": {
+    "api": "node index",
+    "cli": "meta-scraper -u https://reddit.com/r/funny",
+    "cli2": "meta-scraper -u "
+  }
+}
