@@ -1,0 +1,24 @@
+{
+  "name": "meta-scraper",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bin": {
+    "meta-scraper": "bin/cli.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "node-fetch": "^1.6.0",
+    "yargs": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "3.3.1"
+  },
+  "keywords": [],
+  "license": "WTFPL",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./bin/cli --url https://reddit.com/r/sports"
+  }
+}
